@@ -77,13 +77,16 @@ Router.prototype.route = function(pathDef, options, group) {
     var oldRoute = self._current.route;
     self._oldRouteChain.push(oldRoute);
 
-    var queryParams = self._qs.parse(context.querystring);
+    var queryParams = self._qs.parse(context.querystring, { encode: false });
+    console.log('querystring test', context.querystring)
+    console.log('parsed', queryParams)
     // _qs.parse() gives us a object without prototypes,
     // created with Object.create(null)
     // Meteor's check doesn't play nice with it.
     // So, we need to fix it by cloning it.
     // see more: https://github.com/meteorhacks/flow-router/issues/164
     queryParams = JSON.parse(JSON.stringify(queryParams));
+    console.log('cloned', queryParams)
 
     self._current = {
       path: context.path,

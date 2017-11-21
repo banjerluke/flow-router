@@ -1,5 +1,9 @@
 # Changelog
 
+### v2.12.2
+
+* Released as `staringatlights:flow-router` for immediate compatiblity with `staringatlights:fast-render`
+
 ### v2.12.1
 
 * Add NPM modules back. Fixes: [#602](https://github.com/kadirahq/flow-router/issues/602)

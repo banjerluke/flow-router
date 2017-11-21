@@ -1,7 +1,7 @@
 Package.describe({
-  name: 'kadira:flow-router',
+  name: 'staringatlights:flow-router',
   summary: 'Carefully Designed Client Side Router for Meteor',
-  version: '2.12.1',
+  version: '2.12.2',
   git: 'https://github.com/kadirahq/flow-router.git'
 });
 
@@ -24,8 +24,8 @@ Package.onTest(function(api) {
   api.use('mongo');
   api.use('http');
   api.use('random');
-  api.use('meteorhacks:fast-render');
-  api.use('meteorhacks:inject-data');
+  api.use('staringatlights:fast-render');
+  api.use('staringatlights:inject-data');
   api.use('tmeasday:html5-history-api');
 
   api.addFiles('test/common/fast_render_route.js', ['client', 'server']);
@@ -61,7 +61,7 @@ function configure(api) {
   api.use('ejson');
   api.use('modules');
 
-  api.use('meteorhacks:fast-render@2.14.0', ['client', 'server'], {weak: true});
+  api.use('staringatlights:fast-render@2.16.3', ['client', 'server'], {weak: true});
 
   api.addFiles('client/modules.js', 'client');
   api.addFiles('client/triggers.js', 'client');
