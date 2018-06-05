@@ -1,7 +1,7 @@
 Package.describe({
   name: 'staringatlights:flow-router',
   summary: 'Carefully Designed Client Side Router for Meteor',
-  version: '2.12.2',
+  version: '2.12.3',
   git: 'https://github.com/kadirahq/flow-router.git'
 });
 
@@ -61,7 +61,7 @@ function configure(api) {
   api.use('ejson');
   api.use('modules');
 
-  api.use('staringatlights:fast-render@2.16.3', ['client', 'server'], {weak: true});
+  api.use('staringatlights:fast-render', ['client', 'server'], {weak: true});
 
   api.addFiles('client/modules.js', 'client');
   api.addFiles('client/triggers.js', 'client');

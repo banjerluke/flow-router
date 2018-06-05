@@ -1,5 +1,9 @@
 # Changelog
 
+### v2.12.3
+
+* Allow package to use v3 of `staringatlights:fast-render`
+
 ### v2.12.2
 
 * Released as `staringatlights:flow-router` for immediate compatiblity with `staringatlights:fast-render`
